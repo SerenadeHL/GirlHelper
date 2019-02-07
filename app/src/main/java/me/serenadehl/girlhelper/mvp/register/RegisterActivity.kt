@@ -26,15 +26,15 @@ class RegisterActivity : MVPBaseActivity<IRegisterPresenter>(), IRegisterView {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         btn_register.setOnClickListener {
-            val account = tiet_account.text.toString()
+            val username = tiet_username.text.toString()
             val password = tiet_password.text.toString()
             when {
-                TextUtils.isEmpty(account) -> {
-                    R.string.account_can_not_be_empty.toast()
+                TextUtils.isEmpty(username) -> {
+                    R.string.username_can_not_be_empty.toast()
                     return@setOnClickListener
                 }
-                account.length < 6 -> {
-                    R.string.account_can_not_shorter_than_six.toast()
+                username.length < 6 -> {
+                    R.string.username_can_not_shorter_than_six.toast()
                     return@setOnClickListener
                 }
 
@@ -48,7 +48,7 @@ class RegisterActivity : MVPBaseActivity<IRegisterPresenter>(), IRegisterView {
                 }
             }
             hideKeyboard(currentFocus!!)
-            mPresenter.register(account, password)
+            mPresenter.register(username, password)
             mProgressDialog = ProgressDialog.show(this@RegisterActivity, "注册", "注册中...")
         }
     }

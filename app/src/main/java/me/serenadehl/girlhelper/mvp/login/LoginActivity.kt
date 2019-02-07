@@ -31,15 +31,15 @@ class LoginActivity : MVPBaseActivity<ILoginPresenter>(), ILoginView {
         }
 
         btn_login.setOnClickListener {
-            val account = tiet_account.text.toString()
+            val username = tiet_username.text.toString()
             val password = tiet_password.text.toString()
             when {
-                TextUtils.isEmpty(account) -> {
-                    R.string.account_can_not_be_empty.toast()
+                TextUtils.isEmpty(username) -> {
+                    R.string.username_can_not_be_empty.toast()
                     return@setOnClickListener
                 }
-                account.length < 6 -> {
-                    R.string.account_can_not_shorter_than_six.toast()
+                username.length < 6 -> {
+                    R.string.username_can_not_shorter_than_six.toast()
                     return@setOnClickListener
                 }
 
@@ -53,7 +53,7 @@ class LoginActivity : MVPBaseActivity<ILoginPresenter>(), ILoginView {
                 }
             }
             hideKeyboard(currentFocus!!)
-            mPresenter.login(account, password)
+            mPresenter.login(username, password)
             mProgressDialog = ProgressDialog.show(this@LoginActivity, "登录", "登录中...")
         }
     }

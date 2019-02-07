@@ -16,9 +16,9 @@ interface ILoginView : IBaseView {
 }
 
 interface ILoginPresenter : IBasePresenter {
-    fun login(account: String, password: String)
+    fun login(username: String, password: String)
 }
 
 interface ILoginModel : IBaseModel {
-    fun login(account: String, password: String, success: () -> Unit, failure: () -> Unit)
+    fun login(username: String, password: String, success: () -> Unit, failure: () -> Unit)
 }

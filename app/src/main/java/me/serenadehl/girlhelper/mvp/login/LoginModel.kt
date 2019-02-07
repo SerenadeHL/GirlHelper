@@ -14,8 +14,8 @@ import me.serenadehl.girlhelper.extensions.filterException
  * 创建时间：2019-02-04 19:59:38
  */
 class LoginModel : MVPBaseModel(), ILoginModel {
-    override fun login(account: String, password: String, success: () -> Unit, failure: () -> Unit) {
-        AVUser.logInInBackground(account, password, object : LogInCallback<Users>() {
+    override fun login(username: String, password: String, success: () -> Unit, failure: () -> Unit) {
+        AVUser.logInInBackground(username, password, object : LogInCallback<Users>() {
             override fun done(user: Users?, e: AVException?) {
                 filterException(e, success, failure)
             }

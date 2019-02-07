@@ -57,7 +57,5 @@ class MainActivity : BaseActivity() {
         } else {
             mIvBg.load(background)
         }
-//        mIvHead.loadCircle("http://lc-8oyp4vqk.cn-n1.lcfile.com/XSvxmPz1QpNOncd1ez4KaRmSN1351NV94YO5oPX4.jpg")
-//        mIvBg.load("http://lc-8oyp4vqk.cn-n1.lcfile.com/ubyuTUykWjI0u5qbRFk5bp5ibB2JqRJ28ufkAUkb.jpg")
     }
 }

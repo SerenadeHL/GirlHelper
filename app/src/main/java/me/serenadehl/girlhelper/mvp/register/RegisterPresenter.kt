@@ -13,8 +13,8 @@ import me.serenadehl.girlhelper.utils.LoginUtils
 class RegisterPresenter : MVPBasePresenter<IRegisterView, IRegisterModel>(), IRegisterPresenter {
     override fun createModel() = RegisterModel()
 
-    override fun register(account: String, password: String) {
-        mModel.register(account, password, {
+    override fun register(username: String, password: String) {
+        mModel.register(username, password, {
             //注册成功
             LoginUtils.saveSessionToken()
             mView.get()?.goHomepage()

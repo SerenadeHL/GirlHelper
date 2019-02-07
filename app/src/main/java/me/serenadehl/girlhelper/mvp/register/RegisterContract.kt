@@ -16,9 +16,9 @@ interface IRegisterView : IBaseView {
 }
 
 interface IRegisterPresenter : IBasePresenter {
-    fun register(account: String, password: String)
+    fun register(username: String, password: String)
 }
 
 interface IRegisterModel : IBaseModel {
-    fun register(account: String, password: String, success: () -> Unit, failure: () -> Unit)
+    fun register(username: String, password: String, success: () -> Unit, failure: () -> Unit)
 }
