@@ -8,4 +8,19 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+    <style name="EditText_AccountParent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:digits">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_</item>
+    </style>
+    <!--账号输入字符限制和长度限制-->
+    <style name="EditText_Account" parent="EditText_AccountParent">
+        <item name="android:maxLength">18</item>
+    </style>
+
+    <!--密码输入字符限制和长度限制-->
+    <style name="EditText_Password" parent="EditText_AccountParent">
+        <item name="android:maxLength">16</item>
+    </style>
 </resources>

@@ -1,3 +1,30 @@
 <resources>
-    <string name="app_name">girlhelper</string>
+    <string name="app_name">小仙女助手</string>
+    <string name="login">登录</string>
+    <string name="login_success">登录成功</string>
+    <string name="login_fail">登录失败</string>
+    <string name="please_input_account">请输入账号</string>
+    <string name="please_input_password">请输入密码</string>
+    <string name="password_is_empty">密码为空</string>
+    <string name="account_is_exists">用户名已经被占用</string>
+    <string name="email_is_exists">邮箱已经被占用</string>
+    <string name="email_is_empty">邮箱为空</string>
+    <string name="account_does_not_match_password">用户名和密码不匹配</string>
+    <string name="phone_is_exists">手机号码已经被注册</string>
+    <string name="user_not_found">用户不存在</string>
+    <string name="email_user_not_found">邮箱对应的用户不存在</string>
+    <string name="phone_user_not_found">手机号对应的用户不存在</string>
+    <string name="please_input_phone">请提供手机号码</string>
+    <string name="unverified_phone">未验证的手机号</string>
+    <string name="unverified_email">未验证的邮箱</string>
+    <string name="invalid_account">无效的用户名</string>
+    <string name="invalid_password">无效的密码</string>
+    <string name="login_fail_too_many_times">登录失败次数超过限制，请稍候再试</string>
+    <string name="account_can_not_be_empty">用户名不能为空</string>
+    <string name="password_can_not_be_empty">密码不能为空</string>
+    <string name="password_can_not_shorter_than_six">密码长度不能少于6位</string>
+    <string name="account_can_not_shorter_than_six">用户名长度不能少于6位</string>
+    <string name="settings">设置</string>
+    <string name="register">注册</string>
+    <string name="register_success">注册成功</string>
 </resources>
