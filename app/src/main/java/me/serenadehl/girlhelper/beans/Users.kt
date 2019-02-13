@@ -8,9 +8,13 @@ import com.avos.avoscloud.AVUser
  * 创建时间：2019-02-05 17:29:00
  */
 class Users : AVUser() {
-    fun getHead() = getString("head")
+
+    fun setNickname(nickname: String) = put("nickname", nickname)
+    fun getNickname() = getString("nickname") ?: ""
+
+    fun getHead() = getString("head") ?: ""
     fun setHead(head: String) = put("head", head)
 
-    fun getBackgroud() = getString("background")
-    fun setBackgroud(background: String) = put("background", background)
+    fun getBackground() = getString("background") ?: ""
+    fun setBackground(background: String) = put("background", background)
 }

@@ -13,6 +13,6 @@ class App : BaseApplication() {
         super.onCreate()
         //LeanCloud初始化
         AVOSCloud.initialize(this, "8OyP4VQki1FtOk1am4iO9VzT-gzGzoHsz", "QtkjmArImj7COpNTRYCSJQPV");
-        AVOSCloud.setDebugLogEnabled(BuildConfig.DEBUG)
+        AVOSCloud.setDebugLogEnabled(DEBUG)
     }
 }

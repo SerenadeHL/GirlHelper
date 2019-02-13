@@ -20,5 +20,5 @@ interface IRegisterPresenter : IBasePresenter {
 }
 
 interface IRegisterModel : IBaseModel {
-    fun register(username: String, password: String, success: () -> Unit, failure: () -> Unit)
+    fun register(usernamem: String, password: String, success: () -> Unit, failure: () -> Unit)
 }

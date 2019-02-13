@@ -1,15 +1,20 @@
 package me.serenadehl.girlhelper.extensions
 
 import com.avos.avoscloud.AVException
+import com.avos.avoscloud.AVFile
+import com.avos.avoscloud.ProgressCallback
+import com.avos.avoscloud.SaveCallback
 import me.serenadehl.base.base.mvpbase.MVPBaseModel
 import me.serenadehl.girlhelper.R
+import java.io.File
 
 /**
  * 作者：Serenade
  * 邮箱：SerenadeHL@163.com
  * 创建时间：2019-02-04 23:41:49
  */
-fun MVPBaseModel.filterException(e: AVException?, success: () -> Unit, failure: () -> Unit) {
+
+private fun baseFilterException(e: AVException?, success: () -> Unit, failure: () -> Unit) {
     if (e == null) {
         success()
     } else {
@@ -32,4 +37,17 @@ fun MVPBaseModel.filterException(e: AVException?, success: () -> Unit, failure: 
         }
         failure()
     }
+}
+
+fun MVPBaseModel.filterException(e: AVException?, success: () -> Unit, failure: () -> Unit) {
+    baseFilterException(e, success, failure)
+}
+
+fun File.saveToLeanCloud(success: (String) -> Unit, failure: () -> Unit) {
+    val file = AVFile.withFile(name, this)
+    file.saveInBackground(object : SaveCallback() {
+        override fun done(e: AVException?) {
+            baseFilterException(e, { success(file.url) }, failure)
+        }
+    })
 }

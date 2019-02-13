@@ -27,4 +27,9 @@
     <string name="settings">设置</string>
     <string name="register">注册</string>
     <string name="register_success">注册成功</string>
+    <string name="head_upload_success">头像上传成功</string>
+    <string name="background_upload_success">背景上传成功</string>
+    <string name="background_upload_fail">背景上传失败</string>
+    <string name="head_upload_fail">头像上传失败</string>
+    <string name="please_grant_necessary_permissions">请授予必要权限</string>
 </resources>

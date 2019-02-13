@@ -12,16 +12,12 @@ import me.serenadehl.girlhelper.constant.SPConst
  * 邮箱：SerenadeHL@163.com
  * 创建时间：2019-02-04 20:02:05
  */
-class LoginUtils {
-    companion object {
-        fun isLogin() = AVUser.getCurrentUser() != null
+object LoginUtils {
+    fun isUnLogin() = AVUser.getCurrentUser() == null
 
-        fun isUnLogin() = !isLogin()
+    fun getUser(): Users? = AVUser.getCurrentUser(Users::class.java)
 
-        fun getUser(): Users? = AVUser.getCurrentUser(Users::class.java)
+    fun saveSessionToken() = getUser()?.sessionToken.saveToSP(SPConst.SESSION_TOKEN)
 
-        fun saveSessionToken() = getUser()?.sessionToken.saveToSP(SPConst.SESSION_TOKEN)
-
-        fun hasSessionToken() = !TextUtils.isEmpty(SPUtil.getString(SPConst.SESSION_TOKEN))
-    }
+    fun hasSessionToken() = !TextUtils.isEmpty(SPUtil.getString(SPConst.SESSION_TOKEN))
 }
